@@ -58,9 +58,8 @@ Desarrollar una aplicación web que permita:
 ## 🚀 Cómo probar el proyecto
 
 ### 🔗 Versión online (Vercel)
-👉 *Colocar aquí tu enlace de Vercel cuando lo tengas*  
-Ejemplo:  
-`https://tu-proyecto.vercel.app/`
+👉 Enlace a Vercel
+https://carrito-de-compras-umber.vercel.app/
 
 ---
 
