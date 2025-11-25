@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Juegos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Detalle de Juegos</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="paneldecontrol.html">Contacto</a></li>
+            <li class="carrito-icono">
+                <a href="carrito.html"></a>
+                <img src="iconocarrito.svg" alt="Carrito">
+                <p id="totalproducto">0</p>
+            </li>
+            <li><a href="login.html">Ingresar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Buscador funcional -->
+    <div class="search-bar">
+        <input type="text" id="buscador" placeholder="Buscar juegos...">
+        <button id="btnBuscar">Buscar</button>
+    </div>
+</header>
+
+<main>
+    <section id="boxproductos" class="grid-juegos">
+        <!-- Aquí se cargarán todas las cartas de juegos desde detalle.js -->
+    </section>
+</main>
+
+<footer>
+    <h3>Tienda Gamer</h3>
+    <p>Colegio Mano Amiga Santa MAria</p>
+    <p>Teléfono: +54 911 2283-6301</p>
+    <p>© 2025 Tienda Gamer. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Tu JS que voy a actualizar para Firebase -->
+<script type="module" src="detalle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Carrito de Compra</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="detalle.html">Productos</a></li>
+                <li><a href="paneldecontrol.html">Contacto</a></li>
+                <li class="carrito-icono">
+                    <a href="carrito.html">
+                        <img src="iconocarrito.svg" alt="Carrito">
+                        <p id="totalproducto">0</p>
+                    </a>
+                </li>
+                <li><a href="login.html">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tabla-carrito">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Cantidad</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody id="listadeproductos">
+                    <!-- Productos del carrito cargados por JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="totalcompra">
+            <h2>Total de la Compra:</h2>
+            <h2 id="totalgasto">$0</h2>
+            <button id="finalizarCompra" class="btn-comprar" onclick="finalizarCompra()">Finalizar Compra</button>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Tienda Gamer</h3>
+        <p>Colegio Mano Amiga Santa MAria</p>
+        <p>Teléfono: +54 911 2283-6301</p>
+        <p>© 2025 Tienda Gamer. Todos los derechos reservados.</p>
+    </footer>
+
+
+    <script src="carrito.js"></script>
+    <script>
+        function finalizarCompra() {
+            alert("Gracias por tu compra!");
+            localStorage.removeItem("carrito");
+            localStorage.setItem("totalproductos", 0);
+            location.reload();
+        }
+    </script>
+</body>
+</html>

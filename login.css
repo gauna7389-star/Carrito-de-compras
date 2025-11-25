@@ -1,0 +1,372 @@
+/* ------------------- RESET GLOBAL ------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ------------------- BODY ------------------- */
+body {
+    background: linear-gradient(160deg, #0b0b1f, #1a1a3b);
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* ------------------- HEADER ------------------- */
+header {
+    width: 100%;
+    background: rgba(20, 20, 40, 0.95);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(102, 110, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título */
+header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #8b6dfd;
+    text-shadow: 0 0 6px rgba(102, 110, 255, 0.5);
+    margin-bottom: 15px;
+}
+
+/* NAV ------------------- */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #cfcfe0;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background: rgba(102, 110, 255, 0.15);
+}
+
+/* Carrito */
+.carrito-icono {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.carrito-icono img {
+    width: 28px;
+    height: 28px;
+}
+
+#totalproducto {
+    background: #667eea;
+    color: #fff;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* User Menu */
+#userMenu a {
+    color: #cfcfe0;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+#userMenu a:hover {
+    background: rgba(139, 109, 253, 0.2);
+    color: #fff;
+}
+
+/* ------------------- LOGIN MAIN ------------------- */
+main#boxlogin {
+    background: rgba(20, 20, 40, 0.9);
+    padding: 50px 40px;
+    border-radius: 20px;
+    margin: 40px 20px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Login Title */
+#boxlogin h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #8b6dfd;
+    text-shadow: 0 0 8px rgba(102,110,255,0.4);
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+/* ------------------- FORM ------------------- */
+form#login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form#login label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+/* Inputs */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(100,100,255,0.3);
+    background: rgba(10,10,25,0.8);
+    color: #e0e0e0;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 12px rgba(102,110,255,0.4);
+    outline: none;
+}
+
+/* Checkbox */
+label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    accent-color: #667eea;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+input[type="checkbox"]:hover { transform: scale(1.15); }
+input[type="checkbox"]:checked { box-shadow: 0 0 10px #667eea; }
+
+/* ------------------- BOTONES ------------------- */
+button#btningresar, #btnGoogle {
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 12px;
+    border: none;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea, #8b6dfd);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+button#btningresar:hover, #btnGoogle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(102,110,255,0.4);
+}
+
+/* ------------------- MENSAJES ------------------- */
+#mensaje {
+    display: none;
+    font-weight: 700;
+    padding: 15px 18px;
+    border-radius: 12px;
+    border-left: 5px solid #667eea;
+    text-align: center;
+    margin-top: 20px;
+    background: rgba(30,30,50,0.9);
+    color: #fff;
+    animation: slideIn 0.4s ease forwards;
+}
+#mensaje.error { border-color: #f44336; background: rgba(50,10,20,0.85); }
+#mensaje.success { border-color: #8b6dfd; background: rgba(20,20,40,0.85); }
+#mensaje:not(:empty) { display: block; }
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------- FOOTER ------------------- */
+footer {
+    width: 100%;
+    background: rgba(15,15,30,0.95);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid #667eea;
+    box-shadow: 0 -2px 15px rgba(102,110,255,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h3 {
+    font-size: 22px;
+    color: #8b6dfd;
+    text-shadow: 0 0 8px rgba(102,110,255,0.4);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+footer p {
+    font-size: 14px;
+    color: #aaa;
+    margin: 5px 0;
+}
+
+/* ------------------- BOTONES AVANZADOS ------------------- */
+button#btningresar, #btnGoogle {
+    position: relative;
+    overflow: hidden;
+}
+
+button#btningresar::after, #btnGoogle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    transition: all 0.5s ease;
+}
+button#btningresar:hover::after, #btnGoogle:hover::after {
+    left: 100%;
+}
+
+/* ------------------- ANIMACIONES SUAVES ------------------- */
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 15px rgba(102,110,255,0.3), 0 0 30px rgba(139,109,253,0.2); }
+    50% { box-shadow: 0 0 25px rgba(102,110,255,0.4), 0 0 50px rgba(139,109,253,0.3); }
+}
+
+/* ------------------- CENTRADO GLOBAL ------------------- */
+main#boxlogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 1024px) {
+    main#boxlogin {
+        padding: 40px 30px;
+        margin: 30px 15px;
+    }
+    nav ul { gap: 25px; }
+}
+
+@media (max-width: 768px) {
+    main#boxlogin {
+        padding: 35px 25px;
+        margin: 25px 10px;
+    }
+    header h1 { font-size: 28px; }
+    nav ul { flex-wrap: wrap; gap: 18px; }
+    #btningresar, #btnGoogle { padding: 12px 0; font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+    main#boxlogin {
+        padding: 30px 20px;
+        margin: 20px 5px;
+        width: 95%;
+    }
+    header h1 { font-size: 24px; margin-bottom: 10px; }
+    nav ul { gap: 12px; justify-content: center; }
+    #btningresar, #btnGoogle { padding: 10px 0; font-size: 13px; }
+}
+
+/* ------------------- DETALLES DECORATIVOS ------------------- */
+/* Efecto sutil de fondo animado */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 30%, rgba(102,110,255,0.05), transparent 70%),
+                radial-gradient(circle at 80% 70%, rgba(139,109,253,0.05), transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+    animation: bgMove 30s linear infinite;
+}
+@keyframes bgMove {
+    0% { transform: translate(0,0) rotate(0deg); }
+    50% { transform: translate(10px,10px) rotate(180deg); }
+    100% { transform: translate(0,0) rotate(360deg); }
+}
+
+/* Sombra interna para login y panel */
+#boxlogin {
+    box-shadow: inset 0 0 25px rgba(0,0,0,0.4), 0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* Hover sutil para inputs */
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="text"]:hover {
+    box-shadow: 0 0 10px rgba(102,110,255,0.3);
+}
+
+/* Separadores y líneas suaves */
+#boxlogin p {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 13px;
+    color: #aaa;
+    position: relative;
+}
+#boxlogin p::before, #boxlogin p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: rgba(102,110,255,0.2);
+}
+#boxlogin p::before { left: 0; }
+#boxlogin p::after { right: 0; }

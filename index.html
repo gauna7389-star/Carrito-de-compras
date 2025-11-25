@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Gamer - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header con buscador -->
+    <header>
+        <h1>Tienda Gamer</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="detalle.html">Productos</a></li>
+                <li><a href="paneldecontrol.html">Contacto</a></li>
+                <li class="carrito-icono">
+                    <a href="carrito.html">
+                        <img src="iconocarrito.svg" alt="Carrito">
+                        <p id="totalproducto">0</p>
+                    </a>
+                </li>
+                <li><a href="login.html">Ingresar</a></li>
+            </ul>
+        </nav>
+        <!-- Buscador -->
+        <div class="search-bar">
+            <input type="text" id="buscador" placeholder="Buscar juegos...">
+        </div>
+    </header>
+
+    <!-- Sección Nuestra Idea / Visión -->
+    <section class="nuestra-idea">
+        <h2>Nuestra Idea y Visión</h2>
+        <p>
+            Tienda Gamer nació de la pasión por los videojuegos y de la idea de crear un espacio donde los jugadores puedan encontrar los mejores títulos y accesorios para sus consolas de manera fácil, confiable y segura. 
+        </p>
+        <p>
+            Nuestra visión es que cada gamer, ya sea principiante o profesional, tenga acceso a información clara sobre los juegos, recomendaciones personalizadas y productos de calidad. Además, buscamos acercar a la comunidad gamer de Argentina a precios accesibles y con un diseño simple y amigable.
+        </p>
+        <p>
+            Nuestro objetivo es que la experiencia de compra sea intuitiva, que puedas explorar nuevas tendencias, enterarte de ofertas y descubrir títulos que quizá nunca habías considerado. ¡Todo esto en un solo lugar, pensado por gamers para gamers!
+        </p>
+    </section>
+
+    <!-- Sección de categorías populares -->
+    <section class="categorias">
+        <h2>Categorías Populares</h2>
+        <div class="grid-categorias">
+            <div class="categoria-card">PS5</div>
+            <div class="categoria-card">PS4</div>
+            <div class="categoria-card">Accesorios</div>
+            <div class="categoria-card">Ofertas</div>
+            <div class="categoria-card">Novedades</div>
+        </div>
+    </section>
+
+    <!-- Sección de recomendaciones horizontales -->
+    <section class="recomendaciones">
+        <h2>Juegos Recomendados</h2>
+        <div class="grid-recomendaciones-horizontal">
+            <!-- Se pueden cargar con JS o poner ejemplos estáticos -->
+            <div class="recom-card">
+                <img src="img/the.jpeg" alt="The Last of Us">
+                <h3>The Last of Us</h3>
+                <p>$21.000</p>
+            </div>
+            <div class="recom-card">
+                <img src="img/uncharted.jpeg" alt="Uncharted 4">
+                <h3>Uncharted 4</h3>
+                <p>$18.000</p>
+            </div>
+            <div class="recom-card">
+                <img src="img/god.jpeg" alt="God of War">
+                <h3>God of War</h3>
+                <p>$22.000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta-juegos">
+        <h2>¡Descubre todos nuestros juegos!</h2>
+        <button onclick="document.getElementById('boxproductos').scrollIntoView({behavior:'smooth'})">
+            Ver Todos
+        </button>
+    </section>
+
+  <footer>
+        <h3>Tienda Gamer</h3>
+        <p>Colegio Mano Amiga Santa MAria</p>
+        <p>Teléfono: +54 911 2283-6301</p>
+        <p>© 2025 Tienda Gamer. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="javascrip.js"></script>
+</body>
+</html>
