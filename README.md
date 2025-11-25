@@ -67,4 +67,4 @@ https://carrito-de-compras-umber.vercel.app/
 
 1. Descargar o clonar el repositorio:
    ```bash
-   git clone https://github.com/TU-USUARIO/TU-REPO.git
+   git clone https://github.com/gauna7389-star/Carrito-de-compras.git
