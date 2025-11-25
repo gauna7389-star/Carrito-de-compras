@@ -1,6 +1,4 @@
-// -------------------------------------
 // Cargar productos desde localStorage o usar array inicial
-// -------------------------------------
 let productos = JSON.parse(localStorage.getItem("productos")) || [
     { id: 1, nombre: "The Last of Us", descripcion: "Juego de historia y supervivencia zombi", precio: 21000, stock: 10, imagen: "https://tuimagen.com/thelastofus.jpg" },
     { id: 2, nombre: "Uncharted 4", descripcion: "Aventura de acción y exploración", precio: 18000, stock: 12, imagen: "https://tuimagen.com/uncharted4.jpg" },
@@ -8,18 +6,14 @@ let productos = JSON.parse(localStorage.getItem("productos")) || [
     // Podés agregar los 25 productos aquí o más tarde
 ];
 
-// -------------------------------------
 // Actualizar total del carrito en header
-// -------------------------------------
 function actualizarCarrito() {
     let total = localStorage.getItem("totalproductos") || 0;
     document.getElementById("totalproducto").innerText = total;
 }
 actualizarCarrito();
 
-// -------------------------------------
 // Mostrar productos en panel de control
-// -------------------------------------
 function mostrarProductos() {
     const contenedor = document.getElementById("boxproductos");
 
@@ -43,9 +37,7 @@ function mostrarProductos() {
     }
 }
 
-// -------------------------------------
 // Agregar nuevo producto
-// -------------------------------------
 document.getElementById("btnAgregarProducto").addEventListener("click", () => {
     const nombre = document.getElementById("nombreProducto").value.trim();
     const precio = parseInt(document.getElementById("precioProducto").value);
@@ -83,9 +75,7 @@ document.getElementById("btnAgregarProducto").addEventListener("click", () => {
     mostrarProductos();
 });
 
-// -------------------------------------
 // Eliminar producto
-// -------------------------------------
 function eliminarProducto(id) {
     productos = productos.filter(p => p.id !== id);
     localStorage.setItem("productos", JSON.stringify(productos));
@@ -94,7 +84,5 @@ function eliminarProducto(id) {
 
 window.eliminarProducto = eliminarProducto;
 
-// -------------------------------------
 // Ejecutar al cargar la página
-// -------------------------------------
 mostrarProductos();

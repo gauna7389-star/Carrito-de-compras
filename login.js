@@ -1,6 +1,4 @@
-// -------------------------------------
 // Mostrar u ocultar confirmación de contraseña
-// -------------------------------------
 const inpver = document.getElementById("inpver");
 inpver.addEventListener("change", () => {
     if (inpver.checked) {
@@ -12,9 +10,7 @@ inpver.addEventListener("change", () => {
     }
 });
 
-// -------------------------------------
 // Manejo del formulario
-// -------------------------------------
 const form = document.getElementById("login");
 const mensaje = document.getElementById("mensaje");
 
@@ -73,9 +69,7 @@ form.addEventListener("submit", (e) => {
     }
 });
 
-// -------------------------------------
 // Actualizar total de carrito en header
-// -------------------------------------
 function actualizarCarrito() {
     let total = localStorage.getItem("totalproductos") || 0;
     document.getElementById("totalproducto").innerText = total;

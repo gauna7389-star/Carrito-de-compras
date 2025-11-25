@@ -1,6 +1,3 @@
-// -------------------------------------------------
-// 🔥 CONEXIÓN A FIREBASE
-// -------------------------------------------------
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
@@ -16,16 +13,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// -------------------------------------------------
+
 // VARIABLES
-// -------------------------------------------------
 let productos = [];   // ← se llena desde Firebase
 const boxproductos = document.getElementById("boxproductos");
 const contadores = {}; 
 
-// -------------------------------------------------
-// 📥 CARGAR PRODUCTOS DESDE FIREBASE
-// -------------------------------------------------
+// Carga los productos desde firebase
 async function cargarDesdeFirebase() {
     const querySnapshot = await getDocs(collection(db, "productos"));
     productos = [];
@@ -41,9 +35,7 @@ async function cargarDesdeFirebase() {
     actualizarCarritoIcono();
 }
 
-// -------------------------------------------------
-// 🎮 MOSTRAR PRODUCTOS EN PANTALLA
-// -------------------------------------------------
+// muestra los productos
 function cargarProductos(lista) {
     boxproductos.innerHTML = "";
 
@@ -74,9 +66,7 @@ function cargarProductos(lista) {
     });
 }
 
-// -------------------------------------------------
-// ➕➖ CONTADORES
-// -------------------------------------------------
+// Contadores
 window.sumarProducto = function(id) {
     const producto = productos.find(p => p.id === id);
     if (contadores[id] < producto.stock) contadores[id]++;
@@ -88,9 +78,7 @@ window.restarProducto = function(id) {
     document.getElementById(`contador-${id}`).innerText = contadores[id];
 }
 
-// -------------------------------------------------
-// 🛒 AGREGAR AL CARRITO
-// -------------------------------------------------
+//  AGREGAR AL CARRITO
 window.agregarCarrito = function(id) {
     const producto = productos.find(p => p.id === id);
     const cantidad = contadores[id];
@@ -123,17 +111,14 @@ window.agregarCarrito = function(id) {
     actualizarCarritoIcono();
 };
 
-// -------------------------------------------------
-// 🧮 ACTUALIZAR ICONO DEL CARRITO
-// -------------------------------------------------
+// ACTUALIZAR ICONO DEL CARRITO
 function actualizarCarritoIcono() {
     const total = localStorage.getItem("totalproductos") || 0;
     document.getElementById("totalproducto").innerText = total;
 }
 
-// -------------------------------------------------
-// 🔎 BUSCADOR
-// -------------------------------------------------
+//bascador
+
 const buscador = document.getElementById("buscador");
 const btnBuscar = document.getElementById("btnBuscar");
 
@@ -145,7 +130,5 @@ btnBuscar.addEventListener("click", () => {
     cargarProductos(filtrados);
 });
 
-// -------------------------------------------------
-// 🚀 INICIAR
-// -------------------------------------------------
+
 cargarDesdeFirebase();
