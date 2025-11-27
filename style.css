@@ -2290,3 +2290,25 @@ footer p {
 }
 
 
+.recom-card {
+    display: flex;
+    flex-direction: column;   /* Ordena todo hacia abajo */
+    align-items: center;      /* Centra el contenido */
+    gap: 8px;                 /* Separación entre elementos */
+}
+
+.recom-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.recom-card button {
+    margin-top: auto;         /* Asegura que quede al final */
+    width: 90%;
+    padding: 10px;
+    background: #ff4747;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
